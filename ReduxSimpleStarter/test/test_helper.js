@@ -18,8 +18,8 @@ chaiJquery(chai, chai.util, $);
 
 function renderComponent(ComponentClass, props = {}, state = {}) {
   const componentInstance =  TestUtils.renderIntoDocument(
-    <Provider store={createStore(reducers, state)}>
-      <ComponentClass {...props} />
+    <Provider store={ createStore(reducers, state) }>
+      <ComponentClass { ...props } />
     </Provider>
   );
 
@@ -33,4 +33,4 @@ $.fn.simulate = function(eventName, value) {
   TestUtils.Simulate[eventName](this[0]);
 };
 
-export {renderComponent, expect};
+export { renderComponent, expect };
