@@ -10,7 +10,8 @@ class BookDetail extends Component {
     return (
       <div>
         <h3>Details for:</h3>
-        <div>{ this.props.book.title }</div>
+        <div>TITLE: { this.props.book.title }</div>
+        <div>PAGES: { this.props.book.pages }</div>
       </div>
     );
   }
