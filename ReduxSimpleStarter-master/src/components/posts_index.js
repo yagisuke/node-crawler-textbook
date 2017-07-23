@@ -13,7 +13,7 @@ class PostsIndex extends Component {
       <div>
         <div className="text-xs-right">
           <Link to="/posts/new" className="btn btn-primary">
-            app a post
+            Add a post
           </Link>
         </div>
         Lists of blog posts.

@@ -28,6 +28,6 @@ class PostsNew extends Component {
 }
 
 export default reduxForm({
-  from: 'PostsNewForm',
+  form: 'PostsNewForm',
   fields: ['title', 'categories', 'content']
 })(PostsNew);
