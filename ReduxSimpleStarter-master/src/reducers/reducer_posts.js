@@ -1,8 +1,12 @@
-import { combineReducers } from 'redux';
-import PostsReducer from './reducer_posts';
+import { FETCH_POSTS } from '../actions/index';
 
-const rootReducer = combineReducers({
-  posts: PostsReducer
-});
+const INITIAL_STATE = { all: [], post: null }
 
-export default rootReducer;
+export default function(state = INITIAL_STATE, action) {
+  switch(action.type) {
+    case FETCH_POSTS:
+      return { ...state, all: action.payload.data };
+    default:
+      return state;
+  }
+}
